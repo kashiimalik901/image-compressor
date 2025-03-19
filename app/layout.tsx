@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import type { Metadata } from "next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://v0-image-compression-tool.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -29,11 +30,11 @@ export const metadata: Metadata = {
     title: "Image Compressor - Reduce Image Size Without Losing Quality",
     description:
       "Free online tool to compress and optimize your JPG, PNG, and WebP images while maintaining quality. Reduce file size by up to 80% for faster website loading.",
-    url: "https://your-domain.com",
+    url: "https://v0-image-compression-tool.vercel.app",
     siteName: "Image Compressor Tool",
     images: [
       {
-        url: "https://your-domain.com/og-image.jpg",
+        url: "https://v0-image-compression-tool.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Image Compressor Tool Preview",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     title: "Image Compressor - Reduce Image Size Without Losing Quality",
     description:
       "Free online tool to compress and optimize your JPG, PNG, and WebP images while maintaining quality. Reduce file size by up to 80% for faster website loading.",
-    images: ["https://your-domain.com/og-image.jpg"],
+    images: ["https://v0-image-compression-tool.vercel.app/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -76,6 +77,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="google-site-verification" content="e10jKhvLPIC-WOjQTPbPN9DjH8YKZvNDBlijuj4hSOs" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
@@ -87,7 +89,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebApplication",
               "name": "Image Compressor Tool",
-              "url": "https://your-domain.com",
+              "url": "https://v0-image-compression-tool.vercel.app",
               "description": "Free online tool to compress and optimize your JPG, PNG, and WebP images while maintaining quality. Reduce file size by up to 80% for faster website loading.",
               "applicationCategory": "UtilityApplication",
               "operatingSystem": "Any",
@@ -97,12 +99,12 @@ export default function RootLayout({
                 "priceCurrency": "USD"
               },
               "featureList": "Compress JPG, Compress PNG, Compress WebP, Maintain Image Quality, Reduce File Size",
-              "screenshot": "https://your-domain.com/og-image.jpg",
-              "softwareHelp": "https://your-domain.com/faq",
+              "screenshot": "https://v0-image-compression-tool.vercel.app/og-image.jpg",
+              "softwareHelp": "https://v0-image-compression-tool.vercel.app/faq",
               "author": {
                 "@type": "Organization",
                 "name": "Image Compressor Tool",
-                "url": "https://your-domain.com"
+                "url": "https://v0-image-compression-tool.vercel.app"
               }
             }
           `}
