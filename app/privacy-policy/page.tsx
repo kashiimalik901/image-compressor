@@ -1,6 +1,13 @@
+import Link from 'next/link';
 export default function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
+       <Link href="/">
+        <button className="mb-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+          Home
+        </button>
+      </Link>
+      
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
 
       <div className="prose dark:prose-invert max-w-none">
@@ -37,7 +44,7 @@ export default function PrivacyPolicy() {
         </p>
 
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at privacy@your-domain.com.</p>
+        <p>If you have any questions about this Privacy Policy, please contact us at privacy@v0-image-compression-tool.vercel.app.</p>
       </div>
     </div>
   )
