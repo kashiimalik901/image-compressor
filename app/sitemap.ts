@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://v0-image-compression-tool.vercel.app"
+  const baseUrl = "https://tinycompress.vercel.app"
 
   return [
     {

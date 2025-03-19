@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://v0-image-compression-tool.vercel.app/sitemap.xml",
+    sitemap: "https://tinycompress.vercel.app/sitemap.xml",
   }
 }

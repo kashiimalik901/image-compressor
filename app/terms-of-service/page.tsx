@@ -58,7 +58,7 @@ export default function TermsOfService() {
         </p>
 
         <h2>9. Contact</h2>
-        <p>If you have any questions about these Terms, please contact us at terms@v0-image-compression-tool.vercel.app.</p>
+        <p>If you have any questions about these Terms, please contact us at terms@tinycompress.vercel.app.</p>
       </div>
     </div>
   )

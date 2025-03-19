@@ -45,7 +45,7 @@ export default function PrivacyPolicy() {
         </p>
 
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at privacy@v0-image-compression-tool.vercel.app.</p>
+        <p>If you have any questions about this Privacy Policy, please contact us at privacy@tinycompress.vercel.app.</p>
       </div>
     </div>
   )

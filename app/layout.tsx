@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://v0-image-compression-tool.vercel.app"),
+  metadataBase: new URL("https://tinycompress.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     title: "Image Compressor - Reduce Image Size Without Losing Quality",
     description:
       "Free online tool to compress and optimize your JPG, PNG, and WebP images while maintaining quality. Reduce file size by up to 80% for faster website loading.",
-    url: "https://v0-image-compression-tool.vercel.app",
+    url: "https://tinycompress.vercel.app",
     siteName: "Image Compressor Tool",
     images: [
       {
-        url: "https://v0-image-compression-tool.vercel.app/og-image.jpg",
+        url: "https://tinycompress.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Image Compressor Tool Preview",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Image Compressor - Reduce Image Size Without Losing Quality",
     description:
       "Free online tool to compress and optimize your JPG, PNG, and WebP images while maintaining quality. Reduce file size by up to 80% for faster website loading.",
-    images: ["https://v0-image-compression-tool.vercel.app/og-image.jpg"],
+    images: ["https://tinycompress.vercel.app/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -91,7 +91,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebApplication",
               "name": "Image Compressor Tool",
-              "url": "https://v0-image-compression-tool.vercel.app",
+              "url": "https://tinycompress.vercel.app",
               "description": "Free online tool to compress and optimize your JPG, PNG, and WebP images while maintaining quality. Reduce file size by up to 80% for faster website loading.",
               "applicationCategory": "UtilityApplication",
               "operatingSystem": "Any",
@@ -101,12 +101,12 @@ export default function RootLayout({
                 "priceCurrency": "USD"
               },
               "featureList": "Compress JPG, Compress PNG, Compress WebP, Maintain Image Quality, Reduce File Size",
-              "screenshot": "https://v0-image-compression-tool.vercel.app/og-image.jpg",
-              "softwareHelp": "https://v0-image-compression-tool.vercel.app/faq",
+              "screenshot": "https://tinycompress.vercel.app/og-image.jpg",
+              "softwareHelp": "https://tinycompress.vercel.app/faq",
               "author": {
                 "@type": "Organization",
                 "name": "Image Compressor Tool",
-                "url": "https://v0-image-compression-tool.vercel.app"
+                "url": "https://tinycompress.vercel.app"
               }
             }
           `}
