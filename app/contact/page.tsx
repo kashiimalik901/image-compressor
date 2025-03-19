@@ -1,12 +1,12 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import emailjs from "@emailjs/browser"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,13 +23,25 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
+    const emailParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    }
+
+    try {
+      await emailjs.send(
+        "service_4lfna9f",  // Replace with your EmailJS Service ID
+        "template_vzkkane", // Replace with your EmailJS Template ID
+        emailParams,
+        "-4HiVt0_q7mUnUJY8"   // Replace with your EmailJS Public Key
+      )
+
       setIsSubmitted(true)
       setFormData({
         name: "",
@@ -37,7 +49,11 @@ export default function Contact() {
         subject: "",
         message: "",
       })
-    }, 1500)
+    } catch (error) {
+      console.error("Failed to send email:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -48,8 +64,7 @@ export default function Contact() {
         <CardHeader>
           <CardTitle>Get in Touch</CardTitle>
           <CardDescription>
-            Have questions about our image compression tool? Send us a message and we'll get back to you as soon as
-            possible.
+            Have questions? Send us a message, and we'll get back to you as soon as possible.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -57,7 +72,7 @@ export default function Contact() {
             <div className="text-center py-8">
               <h3 className="text-xl font-medium mb-2">Thank You!</h3>
               <p className="text-muted-foreground">
-                Your message has been sent successfully. We'll respond to you shortly.
+                Your message has been sent successfully. We'll respond shortly.
               </p>
               <Button className="mt-4" onClick={() => setIsSubmitted(false)}>
                 Send Another Message
@@ -108,4 +123,3 @@ export default function Contact() {
     </div>
   )
 }
-
