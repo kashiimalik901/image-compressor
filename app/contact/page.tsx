@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import emailjs from "@emailjs/browser"
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -59,10 +60,10 @@ export default function Contact() {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
-      <Link href="/">
-        <button className="mb-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-          Home
-        </button>
+       <Link href="/">
+        <a>
+          <Image src="/logo.webp" alt="Logo" width={50} height={50} className="mb-4" />
+        </a>
       </Link>
       <h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
 

@@ -3,9 +3,9 @@ import Image from 'next/image';
 export default function TermsOfService() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
-     <Link href="/">
+      <Link href="/">
         <a>
-          <Image src="/logo.webp" alt="Logo" width={150} height={50} className="mb-4" />
+          <Image src="/logo.webp" alt="Logo" width={50} height={50} className="mb-4" />
         </a>
       </Link>
       <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>

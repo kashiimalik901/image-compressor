@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import type { Metadata } from "next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Image from 'next/image';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ["latin"] })
 
